@@ -1,0 +1,41 @@
+
+<%- include('partials/header.ejs') %>
+
+<body>
+    
+    <%- include('partials/nav.ejs') %>
+
+  
+    <div class="container">
+
+        <h1>Guia de perguntas</h1> 
+
+
+        <div class="row">
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate deleniti molestias a animi id, aspernatur nam error fugiat. Quos dolorem nostrum obcaecati delectus fuga sequi eveniet sint sed ut iusto!
+            
+        </div>
+
+        <div class="row">
+
+             <form method="POST" action="/salvarpergunta">
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">titulo</label>
+                    <input type="text" class="form-control" id="titulo" name="titulo">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">teto</label>
+                    <textarea class="form-control" id="descricao" name="descricao"></textarea>
+                </div>         
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+
+        </div>      
+
+
+    </div>
+
+  </body>
+
+  <%- include('partials/footer.ejs') %>
