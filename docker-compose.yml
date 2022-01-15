@@ -7,6 +7,10 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: app
+    ports:
+      - "8080:3000"
+    depends_on:
+      - "db"
     restart: unless-stopped
     networks:
       - app-network
@@ -18,7 +22,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "3306:3306"
+      - "33306:3306"
     volumes:
       - ./docker/dbdata:/var/lib/mysql
       - ./docker/mysql/my.cnf:/etc/mysql/my.cnf
