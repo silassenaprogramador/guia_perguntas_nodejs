@@ -23,6 +23,8 @@ services:
     tty: true
     ports:
       - "3306:3306"
+    #volumes:
+    #  - ./docker:/var/lib/mysql
     environment:
       MYSQL_DATABASE: guiaperguntas
       MYSQL_ROOT_PASSWORD: 123456
@@ -35,3 +37,4 @@ services:
 networks:
   app-network:
     driver: bridge
+    
