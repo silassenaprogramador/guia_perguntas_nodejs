@@ -23,13 +23,13 @@ services:
     tty: true
     ports:
       - "3306:3306"
-    #volumes:
-    #  - ./docker:/var/lib/mysql
+    volumes:
+      - ./docker:/var/lib/mysql
     environment:
       MYSQL_DATABASE: guiaperguntas
-      MYSQL_ROOT_PASSWORD: 123456
-      SERVICE_TAGS: dev
-      SERVICE_NAME: mysql
+      MYSQL_ROOT_PASSWORD: 123456 
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
     networks:
       - app-network
 
